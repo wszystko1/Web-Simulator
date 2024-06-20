@@ -1,0 +1,32 @@
+1. WebsiteDisplay Class:
+ - Displays a website's parsed content in a JFrame.
+ - Allows clicking on links (<link>) to navigate to other websites.
+
+2. Website Class:
+-  Represents a website with attributes such as domain, author, parsed content, and rank.
+-  Parses text content into JLabels categorized as regular text (<reg>) or links (<link>).
+-  Displays the website content using the WebsiteDisplay class.
+
+3. DB
+-  DB is a base class with methods to manage websites using a ConcurrentHashMap.
+
+4. RankedWebsites and CreatedWebsites
+-  extend DB to represent databases of ranked and created websites respectively
+ 
+5. Crawler Class:
+-  Implements a thread-based crawler to traverse websites (Website objects) and calculate their ranks using iterative PageRank computation.
+
+6. Model_Website_Form:
+-  allows creating/editing a website's domain, author, and content (HTML-like format).
+    
+7. Edit_Website_Form Classes
+-  allows editing existing websites stored in CreatedWebsites.
+
+8. SearchGUI Class:
+-  Provides a graphical interface for a search engine.
+-  Allows searching for websites by address or phrase.
+-  Displays search results and provides options to create or edit websites.
+
+9. SearchEngine Class:
+-  Initializes the application by loading or creating databases (RankedWebsites and CreatedWebsites).
+-  Manages GUI interaction (SearchGUI) and starts a crawler (Crawler) to update website ranks.
